@@ -1,5 +1,5 @@
 Stars [] star;
-Floater spaceship; 
+Spaceship spaceship; 
 boolean right = false;
 boolean left = false;
 boolean move = false;
@@ -24,10 +24,10 @@ void draw(){
   spaceship.show();
   spaceship.move();
    if(right == true){
-   spaceship.myPointDirection = spaceship.myPointDirection + 1;
+   spaceship.turn(+1);
  } 
    if(left == true){
-   spaceship.myPointDirection = spaceship.myPointDirection - 1;     
+   spaceship.turn(-1);     
    }
    if(move == true){
      spaceship.accelerate(0.01);
@@ -58,10 +58,10 @@ void keyReleased(){
      left = false; 
   }
   if(key == 'q'){
-    spaceship.myCenterX = Math.random() * width + 1;
-    spaceship.myCenterY = Math.random() * width + 1;
-    spaceship.myXspeed = 0;
-    spaceship.myYspeed = 0;
+    spaceship.setcenX(Math.random() * width + 1);
+    spaceship.setcenY(Math.random() * height + 1);
+    spaceship.setspedX(0);
+    spaceship.setspedY(0);
   }
   if(key == 'w'){
     move = false;
