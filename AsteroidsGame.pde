@@ -62,6 +62,7 @@ void keyReleased(){
     spaceship.setcenY(Math.random() * height + 1);
     spaceship.setspedX(0);
     spaceship.setspedY(0);
+spaceship.turn(Math.random() * 1201 - 600);
   }
   if(key == 'w'){
     move = false;
