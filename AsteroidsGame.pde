@@ -5,7 +5,7 @@ boolean left = false;
 boolean move = false;
 boolean hyperspace = false;
 void setup(){          
- size(600, 600); 
+ size(1000, 800); 
  frameRate(120);
  spaceship = new Spaceship(); 
  star = new Stars[250];
